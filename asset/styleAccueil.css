@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,900');
+
+body{
+  background-color: #F0F0F0;
+}
+nav{
+  background: #F0F0F0;
+}
+nav form button{
+  padding: 13px 20px;
+	background: #FFBE55;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: 3px;
+  border: none;
+	border-image-repeat: stretch;
+	border-image-slice: 100%;
+	border-image-outset: 0%;
+}
+
+.container-xl .row div .call-to-actions {
+  margin-top: 2em;
+}
+.container-xl .row div .call-to-actions a {
+  padding: 13px 30px;
+  margin-right: 15px;
+	background: #FFBE55;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: 3px;
+	border-bottom: 3px solid #FFBE55;
+
+}
+
+.container-xl .row div .call-to-actions .light{
+  background: white;  
+  color: rgb(83, 103, 121) !important;
+  border: 1px solid rgb(154, 166, 177);
+  border-bottom: 3px solid rgb(154, 166, 177) !important;
+}
+
+.container-xl .row div .call-to-actions .view{
+  background: #FFBE55;  
+  color: white !important;
+  border-radius: 30px;
+  border: none;
+}
+
+
+/* card about css */
+.container .row div .call {
+  margin-top: 2em;
+}
+.container .row div .call a {
+  padding: 13px 30px;
+  margin-right: 15px;
+	background: #FFBE55;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: 3px;
+	border-bottom: 3px solid #FFBE55;
+	border-image-repeat: stretch;
+	border-image-slice: 100%;
+	border-image-outset: 0%;
+}
+/* start style slide */
+.slider{
+  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.slider .card{
+	flex: 7;
+	margin: 0 10px;
+	background: #fff;
+	height: 400px;
+  width: 350px;
+  border-radius: 2%;
+  }
+  .slider .card .img{
+	height: 170px;
+	
+
+  }
+  .slider .card .img img{
+
+	width: 90%;
+	object-fit: cover;
+  }
+ .slider .card .content{
+	padding: 10px 20px;
+	margin-top: 20%;
+  }
+  .card .content .title{
+	font-size: 18px;
+	font-weight: 600;
+  }
+  .card .content .sub-title{
+	font-size: 14px;
+	font-weight: 600;
+	color: #FFBE55;
+	line-height: 20px;
+  }
+
+/* end style slide */
+.container .row div .call .light{
+  background: white;  
+  color: rgb(83, 103, 121) !important;
+  border: 1px solid rgb(154, 166, 177);
+  border-bottom: 3px solid rgb(154, 166, 177) !important;
+}
+
+.container .row div .call .view{
+  background: #FFBE55;  
+  color: white !important;
+  border-radius: 30px;
+  border: none;
+}
+
+.container .row div h1{
+  font-size: 57px;
+  font-weight: 670;
+  font-family: 'Popins',sans-serif;
+}
+.container .row div p{
+  font-family: 'Popins',sans-serif;
+  font-size: 20px;
+}
+
+.container-xl .row #content{
+ margin: auto;
+}
+iframe{
+  width:350px;
+  height:215px;
+} 
+/*--------------start style  container page----------------*/
+.c h2{
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+  font-size: 70px;
+    font-family: Segoe UI;
+    font-weight: normal;
+    color: black;
+}
+.c:hover h2{
+     color: #FFBE55;
+}
+.container1{
+    margin-top: 110px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+.div{
+     border: 0.5px solid black;
+     width: 350px;
+     height: 350px;
+     margin: 10px;
+     
+}
+.div #f{
+    margin-left: 45%;
+    padding-bottom: 2%;
+}
+.div i{
+    font-size: 80px;
+    margin-top: 13%;
+    margin-left: 37%;
+    color:black ;
+    border-bottom:4px solid black; 
+}
+.div:hover i{
+     color: #FFBE55;
+}
+.a1{
+    font-size: 20px;
+    font-family: Open Sans;
+    font-weight: normal;
+    margin-top: 20%;
+    margin-left: 26%;
+}
+.a2{
+    font-size: 20px;
+    font-family: Open Sans Regular;
+    margin-top: 20%;
+    margin-left: 10%;
+}
+.a3{
+    font-size: 20px;
+    font-family: Open Sans Regular;
+    margin-top: 20%;
+    margin-left: 17%;
+}
+.section6{
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('pics/maps.jpg');
+	height: 60vh;
+	margin-top: 10%;
+}
+.section6 .img1{
+	width: 100%;
+	height: 60vh;
+}
+/* footer css */
+
+footer .row{
+  height: 100px;
+  background: #F2DBB5;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-top: 2%;
+}
+
+footer .row p{
+  font-size: 18px;
+}
+footer .row img{
+  height: 40px;
+}
+
+body{
+  overflow-x: hidden;
+}

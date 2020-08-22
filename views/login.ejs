@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title><%= pageTitle%> - Online Shop</title>
+    <link rel="stylesheet" type="text/css" href="/styleLogin.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+<section>
+<div class="container">
+    <div class="user signinBx">
+        <div class="imgBx"><img src="/Sign-in.png"></div>
+        <div class="formBx">
+            <form action="/login" method="POST">
+                <h2>Sign In</h2>
+                <input type="email" name="email" placeholder="Username">
+                <% let emailError = validationErrors.find(err => err.param === 'email') %>
+                        <% if (emailError) { %>
+                            <p class="alert alert-danger">
+                                <% emailError.msg %>
+                            </p>
+                        <% } %>
+                <input type="password" name="password" placeholder="Password">
+                <% let passwordError = validationErrors.find(err => err.param === 'password') %>
+                        <% if (passwordError) { %>
+                            <p class="alert alert-danger">
+                                <% passwordError.msg %>
+                            </p>
+                        <% } %>
+                <input type="submit" name="" value="Login">
+              
+                <p class="signup">Don't have an account ? <a href="/signup">Sign Up.</a></p>
+                <% if(authError) { %>
+                    <p class="alert alert-primary">
+                        <%= authError %>
+                    </p>
+                <% } %>
+            </form>
+        </div>
+    </div>
+   
+</div>
+</section>
+
+</body>
+</html>

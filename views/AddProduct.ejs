@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= pageTitle%> - Online Shop</title>
+	<link rel="stylesheet" type="text/css" href="/AddProduct.css">
+  <link rel="stylesheet" type="text/css" href="/styleNavbar.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="pics\logo.png" type="image/x-icon">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+   
+  <%- include('parts/navbar') %>
+    <div class="container" id="uploade" >
+        <h1 style="text-align: center;">Create Product</h1>
+        <div class="row" style="justify-content: center;">
+
+          <% if(productAdded) { %>
+    
+            <p class="alert alert-success" style="width: 100%;height: 70px;">Product added successfully</p>
+
+        <% } %>
+
+        <form action="/admin/add" method="POST" enctype="multipart/form-data">
+         <div class="row">
+          <div class="col-sm" id="img-uploade">
+            <div class="dropbox-filed block clearfix uploading" data-dropbox="dragndrop">
+                <h1 class="dropbox-filed-text">Drop files here</h1>
+                <h2 class="dropbox-filed-text">Or click here to upload image product</h2>
+                <input data-dropbox="file" type="file" accept="image/*" name="image">
+                <% let imageError = validationErrors.find(err => err.param === 'image') %>
+                <% if (imageError) { %>
+                    <p class="alert alert-danger">
+                        <%= imageError.msg %>
+                    </p>
+                <% } %>
+              </div>
+          </div>
+          <div class="col-sm" id="form">
+                <div class="form-group">
+                    <label for="exampleInputName">Name</label>
+                    <input type="text" class="form-control" name="name">
+                    <% let nameError = validationErrors.find(err => err.param === 'name') %>
+                    <% if (nameError) { %>
+                        <p class="alert alert-danger">
+                            <%= nameError.msg %>
+                        </p>
+                    <% } %>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputCategory">Category</label>
+                    <input type="text" class="form-control" name="category">
+                    <% let categoryError = validationErrors.find(err => err.param === 'category') %>
+                    <% if (categoryError) { %>
+                        <p class="alert alert-danger">
+                            <%= categoryError.msg %>
+                        </p>
+                    <% } %>
+                  </div>
+                <div class="form-group">
+                  <label for="exampleInputDescription">Description</label>
+                  <textarea type="text" class="form-control" name="description"></textarea>
+                  <% let descriptionError = validationErrors.find(err => err.param === 'description') %>
+                  <% if (descriptionError) { %>
+                      <p class="alert alert-danger">
+                          <%= descriptionError.msg %>
+                      </p>
+                  <% } %>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPrice">Price</label>
+                  <input type="number" class="form-control" name="price">
+                  <% let priceError = validationErrors.find(err => err.param === 'price') %>
+                  <% if (priceError) { %>
+                      <p class="alert alert-danger">
+                          <%= priceError.msg %>
+                      </p>
+                  <% } %>
+                </div>
+              
+                <button type="submit" class="btn" style="background-color: bisque;">Submit</button>
+              </div>
+              </div>
+              </form>
+              
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="row no-gutters">
+            <div class="col-6 col-md-4">
+               <img src="/logo1.png" alt="" height="">
+            </div>
+            <div class="col-sm-6 col-md-8">
+               <p style="color: white;">Copyright Team © 2020. All rights reserved</p>
+            </div>
+          </div>
+      </footer>
+    
+</body>
+</html>

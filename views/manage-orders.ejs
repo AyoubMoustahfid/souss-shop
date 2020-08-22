@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<title><%= pageTitle%> - Online Shop</title>
+<link rel="stylesheet" href="/styleManageOrder.css">
+    <link rel="stylesheet" type="text/css" href="/styleNavbar.css"> 
+  </head>
+  <body>
+    <%- include('parts/navbar') %>
+
+    <div class="container-fluid"  style="margin-top: 70px;">
+      <% if(!(items.length === 0)){ %>
+        <h2 style="margin-left: 44px;"> Manage All Orders</h2>
+      <% } %> 
+        <div class="row" id="table">
+          <div class="col-12 ">
+            <% if(items.length === 0){ %>
+              <div class="img-container" style="background-image: url(https://image.ibb.co/do1mX9/artboard.png);
+              background-position: center center;
+              background-size: contain;
+              background-repeat: no-repeat;
+              height: 436px;"></div>
+            <% }else{ %> 
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" style="text-align: inherit;">ITEM</th>
+                    <th scope="col">EMAIL</th>
+                    <th scope="col">PRICE</th>
+                    <th scope="col">QUANTITY</th>
+                    <th scope="col">TOTAL</th>
+                    <th scope="col">ADRESS</th>
+                    <th scope="col">PHONE</th>
+                    <th scope="col">STATUS</th>
+                    <th scope="col" style="text-align: center;">ACTION</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% for(let i = 0; i < items.length; i++){ %>
+                  <tr class="tr">
+                    <th scope="row"><img src="/<%= items[i].image %>" alt="" height="64px" style="padding-right: 6px;"><a href="/product/<%= items[i].productId %>"><% items[i].name %></a></th>
+                    <th style="padding-top: 31px;"><%= items[i].userId %></th>
+                    <td><%= items[i].price %> $</td>
+                    <td><%= items[i].amount %></td>
+                    <td><%= items[i].price * items[i].amount %> $</td>
+                    <td><%= items[i].address %></td>
+                    <td><%= items[i].phone %></td>
+                    <td><%= items[i].status %></td>
+                    <td class="d-flex justify-content-around">
+                      <% if(items[i].status === 'pending'){ %>
+                        <form style="display: inline-block" method="POST" action="/admin/orders">
+                            <input type="hidden" name="orderId" value="<%= items[i]._id %>">
+                            <input type="hidden" name="status" value="sent">
+
+                            <button type="submit" class="btn" value="Send"  style="border: none;background: #FFBE2D;padding: 7px 4px;color: white;border-radius: 50%;font-size: 2px;">
+							                  <i class="material-icons" data-toggle="tooltip" title="Send Order" >&#xe163;</i>
+
+                        </form>
+                      <% } %>
+                      <% if(items[i].status === 'pending' || items[i].status === 'send'){ %>
+                        <form style="display: inline-block" method="POST" action="/admin/orders">
+                            <input type="hidden" name="orderId" value="<%= items[i]._id %>">
+                            <input type="hidden" name="status" value="complete">
+
+                            <button type="submit" class="btn" value="Complete" style="border: none;background: green;padding: 7px 4px;color: white;border-radius: 50%;font-size: 2px;">
+								                <i class="material-icons" data-toggle="tooltip" title="Complete Order" >&#xe876;</i>
+
+                        </form>
+                      <% } %>
+                    </td>
+                  </tr>
+                <% } %>
+                </tbody>
+              </table>
+
+            <% } %>
+          </div>
+         
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

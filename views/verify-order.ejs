@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= pageTitle%> - Online Shop</title>
+	<link rel="stylesheet" type="text/css" href="/styleOrders.css">
+  <link rel="stylesheet" type="text/css" href="/styleNavbar.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="pics\logo.png" type="image/x-icon">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <%- include('parts/navbar') %>
+    <div class="container1">
+      <div class="block-container" id="form">
+        <% if(validationError){ %>
+          <p class="alert alert-danger">
+             <%= validationError.msg %>
+          </p>  
+       <% } %>
+       <h2>Valid your <b>Order</b></h2>
+       
+        <form action="/orders" method="POST">
+          <input type="text" id="email" name="address" placeholder="Email address">
+          <input type="text" id="phone" name="phone" placeholder="Number Phone">
+          <input type="hidden" name="cartId" value="<%= cart._id%>">
+            <input type="hidden" name="name" value="<%= cart.name%>">
+            <input type="hidden" name="image" value="<%= cart.image%>">
+            <input type="hidden" name="price" value="<%= cart.price%>">
+            <input type="hidden" name="amount" value="<%= cart.amount%>">
+            <input type="hidden" name="productId" value="<%= cart.productId%>">
+            <input type="hidden" name="userId" value="<%= cart.userId%>">
+          <button class="submit">Send Reset Link</button>
+        </form>
+      </div>
+      <div class="block-container image-container " id="image">
+   
+      </div>
+  </div>
+    
+      <footer>
+        <div class="row no-gutters">
+            <div class="col-6 col-md-4">
+               <img src="/logo1.png" alt="" height="">
+            </div>
+            <div class="col-sm-6 col-md-8">
+               <p style="color: white;">Copyright Team © 2020. All rights reserved</p>
+            </div>
+          </div>
+      </footer>
+      
+</body>
+
+
+
+</html>

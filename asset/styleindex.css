@@ -1,0 +1,470 @@
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Poppins', sans-serif;
+	letter-spacing: 1.2px;
+}
+
+h1 {
+	font-size: 60px;
+	font-weight: bolder;
+}
+
+p {
+	font-size: 20px;
+
+}
+
+/* footer css */
+footer{
+  margin-top: 92px;
+}
+footer .row{
+  height: 100px;
+  background: #F2DBB5;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+footer .row p{
+  font-size: 18px;
+}
+footer .row img{
+  height: 40px;
+}
+
+@media(max-width: 800px){
+    #footer{
+        width: 100%;
+        height: 120px;
+        margin-top: 20px;
+    }
+    #footer .row div .img-footer{
+        display: flex;
+        justify-content: center;
+    }
+
+    #footer .row div .img-footer img{
+        height: 20px;
+    }
+    
+    #footer .row div .copyright{
+       text-align: center;
+    }
+    #footer .row div .copyright p{
+      font-size: 15px;
+      margin-top: 10px;
+
+    }
+
+}
+
+/* category search css */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,900');
+
+.container-fluid .row div form div .classic {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 2px solid gray;
+    height: 50px;
+}
+
+
+.container-fluid .row div  div .category {
+    margin-top: 21px;
+    padding: 10px 0 10px 20px;
+    background-color: #FCFAFA;
+}
+
+.container-fluid .row div  div .category .popular h4{
+font-size: 21px;
+}
+
+.container-fluid .row div div .category .popular p{
+    font-size: 19px;
+    color: #A8A6A6;
+}
+
+.container-fluid div .row div .card .row div .card-body #price{
+    color: #E61F5B;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.container-fluid div .row div .card .row div .card-body form .amount{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-fluid div .row div .card .row div .card-body form .amount p{
+    color: #000;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.container-fluid div .row div .card .row div .card-body form .amount input{
+    width: 100px;
+    border: 2px solid #003679;
+}
+
+.container-fluid div .row div .card .row div .card-body form button{
+    border: none;
+    background: #003679;
+    color: white;
+    width: 150px;
+    height: 45px;
+    border-radius: 30px;
+}
+
+@media(max-width : 800px){
+    .container-fluid div h3{
+        text-align: center;
+        font-size: 40px;
+    }
+    .container-fluid div .row div .card{
+        width: 380px;
+        margin: auto;
+    }
+    .container-fluid div .row div .card .row div img{
+        height: 380px;
+    }
+    .container-fluid .row div div .category .popular {
+        display: none;
+    }
+    .container-fluid div .row div .card .row div .card-body form .amount p{
+        margin: 0 !important;
+    }
+
+}
+
+
+@media(max-width : 1400px){
+    .container-fluid .row div div .category .popular {
+        display: none;
+    }
+}
+
+
+@media(max-width : 1200px){
+    .container-fluid div .row div .card .row div img{
+        height: 100%;
+    }
+    .container-fluid div .row div .card .row div .card-body form .amount p{
+        font-size: 15px;
+        margin: auto;
+    }
+    .container-fluid div .row div .card .row div .card-body form button{
+        margin-top: 7px;
+    }
+    .container-fluid div .row div .card .row div .card-body form .amount input{
+        width: 70px;
+    }
+}
+
+
+
+/* pagination css */
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+/* .pagination a {
+display:inline-block;
+margin-right:5px;
+cursor:pointer;
+} */
+
+.pagination>li {
+    display: inline;
+}
+
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
+    color: #777;
+    cursor: not-allowed;
+    background-color: #fff;
+    border-color: #ddd;
+}
+.pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.pagination a {
+display:inline-block;
+cursor:pointer;
+}
+
+/* @media(max-width: 1200px) {
+    .container-fluid div .row div .card .row div .card-body form .add-to-cart {
+      bottom: 0;
+      position: absolute;
+    }
+} */
+
+@media (min-width: 1200px) {  
+    #button {
+      bottom: 10px;
+      position: absolute;
+      width: 220px;
+    }
+}
+
+@media (min-width: 800px) { 
+    #button{
+        width:180px;
+    }
+}
+/* button add to cart css */
+.container-fluid div .row div .card .row div .card-body form .add-to-cart {
+  --color: #fff;
+  --icon: var(--color);
+  --cart: #fff;
+  --dots: #fff;
+  --background: #275EFE;
+  --shadow: rgba(0, 9, 61, 0.16);
+  width: 220px;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 16px;
+  border-radius: 22px;
+  padding: 12px 32px;
+  font-weight: 500;
+  line-height: 20px;
+  transform: scale(var(--s, 0.97));
+  box-shadow: 0 var(--s-y, 4px) var(--s-b, 12px) var(--shadow);
+  color: var(--color);
+  background: var(--background);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart .default {
+  padding-left: 16px;
+  position: relative;
+  opacity: var(--o, 1);
+  transform: scale(var(--s, 1));
+  transition: transform 0.3s, opacity 0.3s;
+  transition-delay: var(--d, 0.3s);
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart .default:before, .container-fluid div .row div .card .row div .card-body form .add-to-cart .default:after {
+  content: '';
+  width: 2px;
+  height: 12px;
+  left: 0;
+  top: 4px;
+  border-radius: 1px;
+  background: var(--icon);
+  position: absolute;
+  transform: rotate(var(--r, 0deg));
+  transition: transform 0.25s;
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart .default:after {
+  --r: 90deg;
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart .success {
+  opacity: var(--o, 0);
+  transform: translate(-50%, var(--y, 12px));
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transition: opacity 0.3s, transform 0.3s;
+  transition-delay: var(--d, 0s);
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart .dots {
+  width: 4px;
+  height: 4px;
+  top: 20px;
+  left: 50%;
+  margin-left: -7px;
+  border-radius: 2px;
+  position: absolute;
+  transform-origin: 10px 50%;
+  background: var(--dots);
+  box-shadow: 5px 0 0 var(--dots), 10px 0 0 var(--dots);
+  opacity: var(--o, 0);
+  transform: scale(var(--s, 0.4));
+  transition: opacity 0.3s, transform 0.3s;
+  transition-delay: var(--d, 0s);
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart .cart {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  border-radius: inherit;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart .cart:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 16px;
+  background: var(--background);
+  top: 17px;
+  right: 100%;
+  z-index: 1;
+  margin-right: -20px;
+  transform: translateX(-18px) rotate(-16deg);
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart .cart > div {
+  top: 13px;
+  right: 100%;
+  transform: translateX(-18px) rotate(-16deg);
+  position: absolute;
+  z-index: 2;
+  transform-origin: 1px 21px;
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart .cart > div:before, .container-fluid div .row div .card .row div .card-body form .add-to-cart .cart > div:after {
+  content: '';
+  position: absolute;
+  top: var(--t, 4px);
+  left: var(--l, 0);
+  height: 2px;
+  width: var(--w, 18px);
+  background: var(--cart);
+  border-radius: 1px;
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart .cart > div:after {
+  --w: 16px;
+  --t: 14px;
+  --l: 1px;
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart .cart > div > div {
+  width: 2px;
+  height: var(--h, 15px);
+  border-radius: 1px;
+  transform: rotate(var(--r, -8deg));
+  background: var(--cart);
+  position: relative;
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart .cart > div > div:before, .container-fluid div .row div .card .row div .card-body form .add-to-cart .cart > div > div:after {
+  content: '';
+  position: absolute;
+  background: inherit;
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart .cart > div > div:after {
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  bottom: var(--b, -6px);
+  left: var(--l, 0);
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart .cart > div > div:first-child:before {
+  border-radius: inherit;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 6px;
+  transform-origin: 5px 1px;
+  transform: rotate(16deg);
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart .cart > div > div:last-child {
+  --h: 12px;
+  --r: 8deg;
+  position: absolute;
+  left: 16px;
+  bottom: -1px;
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart .cart > div > div:last-child:after {
+  --l: -2px;
+  --b: -5px;
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart.added .default {
+  --o: 0;
+  --s: 0.8;
+  --d: 0s;
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart.added .default:before {
+  --r: -180deg;
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart.added .default:after {
+  --r: -90deg;
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart.added .dots {
+  --o: 1;
+  --s: 1;
+  --d: 0.3s;
+  animation: dots 2s linear forwards;
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart.added .success {
+  --o: 1;
+  --y: 0;
+  --d: 1.8s;
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart.added .cart:before, .container-fluid div .row div .card .row div .card-body form .add-to-cart.added .cart > div {
+  animation: cart 2s forwards;
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart:not(.added):hover {
+  --s: 1;
+  --s-y: 8px;
+  --s-b: 20px;
+}
+.container-fluid div .row div .card .row div .card-body form .add-to-cart:not(.added):active {
+  --s: 0.94;
+  --s-y: 2px;
+  --s-b: 6px;
+}
+@keyframes cart {
+  41%, 49%, 57%, 60% {
+    transform: translateX(72px) rotate(0deg);
+  }
+  40%, 47%, 54% {
+    transform: translateX(72px) rotate(0deg) translateY(1px);
+  }
+  100% {
+    transform: translateX(180px) rotate(-16deg);
+  }
+}
+@keyframes dots {
+  5% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px) rotate(-32deg);
+    box-shadow: 5px 0 0 var(--dots), 10px 0 0 var(--dots);
+  }
+  31% {
+    box-shadow: 5px -4px 0 var(--dots), 10px -8px 0 var(--dots);
+  }
+  32%, 50% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  45%, 100% {
+    box-shadow: 5px 0 0 var(--dots), 10px 0 0 var(--dots);
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+/*  end button add to cart css */

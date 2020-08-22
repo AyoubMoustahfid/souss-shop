@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #404040;
+}
+a {
+    text-decoration: none;
+            color: #333;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1.2px;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+p {
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+ 
+* { box-sizing: border-box; }
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
+
+
+
+
+
+.container1 {
+  margin-top: 74px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  width: 1200px;
+  height: 700px;
+  background-color: white;
+}
+.container1  .block-container {
+  position: relative;
+  display: block;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.container1  .block-container h2 {
+  padding-top: 30px;
+  padding-bottom: 110px;
+  text-align: center;
+  color: black;
+  opacity: 0.9;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+
+.container1  .block-container #email,#phone {
+  margin-top: 8px;
+  padding-left: 5px;
+  width: 50%;
+  height: 40px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  color: #AFAFAF;
+  border: 1px solid #CECECE;
+  opacity: 0.8;
+}
+.container1  .block-container .submit {
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  border: none;
+  width: 25%;
+  height: 40px;
+  background-color: #FFBE55;
+  color: white;
+}
+.container1  .block-container .submit:hover {
+  background-color: #FFBE55;
+}
+.container1  .block-container a {
+  display: block;
+  font-size: 10px;
+  margin-top: 30px;
+  text-decoration: none;
+  color: 8E8E8E;
+  text-align: center;
+}
+.container1  .image-container {
+  background-image: url('/imgOrder.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* footer css */
+footer .row{
+    height: 100px;
+    background: #F2DBB5;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+footer .row p{
+    font-size: 18px;
+}
+footer .row img{
+    height: 40px;
+}
+@media(max-width:1370px){
+  #image{
+    width: 500px;
+    height: 500px;
+  }
+}
+@media(max-width:1050px){
+  #image{
+    width: 400px;
+    height: 400px;
+  }
+}
+@media(max-width:1045px){
+ 
+#form{
+margin: auto;
+ padding-left: 30px ;
+}
+#form button{
+  width: 170px;
+
+}
+
+#form input,
+#form #email{
+  width: 380px;
+}
+
+
+}
+
+@media(max-width: 850px) {
+  #image{
+    display: none;
+    }
+
+   
+ 
+}
+

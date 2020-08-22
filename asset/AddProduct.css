@@ -1,0 +1,95 @@
+a {
+    text-decoration: none;
+            color: #333;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1.2px;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+p {
+    font-size: 22px;
+    margin-top: 15px;
+}
+#uploade{
+  margin-top: 8.9%;
+}
+
+#uploade .row #img-uploade .dropbox-filed {
+    display: block;
+    position: relative;
+    border: 3px dashed #c1c1c1;
+    border-radius: 4px;
+    padding: 80px;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: border-color 0.25s;
+    -moz-transition: border-color 0.25s;
+    -o-transition: border-color 0.25s;
+    transition: border-color 0.25s;
+  }
+#uploade .row #img-uploade .dropbox-filed .dropbox-filed-text {
+    color: #999;
+    font-size: 2.2rem;
+    -webkit-transition: color 0.25s;
+    -moz-transition: color 0.25s;
+    -o-transition: color 0.25s;
+    transition: color 0.25s;
+  }
+#uploade .row #img-uploade .dropbox-filed input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+  }
+#uploade .row #img-uploade .dropbox-filed.dragging,
+#uploade .row #img-uploade .dropbox-filed:hover {
+    border-color: #8e8e8e;
+  }
+#uploade .row #img-uploade .dropbox-filed.dragging .dropbox-text,
+#uploade .row #img-uploade .dropbox-filed:hover .dropbox-text {
+    color: #777;
+  }
+.container .row #form form .btn{
+background-color: #E61F5B;
+color: white;
+}
+
+
+
+/* footer css */
+footer{
+  margin-top: 141px;
+}
+footer .row{
+  height: 100px;
+  background: #F2DBB5;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+footer .row p{
+  font-size: 18px;
+}
+footer .row img{
+  height: 40px;
+}
